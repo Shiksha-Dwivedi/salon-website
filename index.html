@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Pacifico&family=Poppins&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <title>New Prasadhika-Handle your beauty with care</title>
+    <style >
+        .whatsapp{
+            position: fixed;
+             bottom: 20px;
+             right: 20px;
+        } 
+    </style>
+    
+</head>
+
+<body> 
+    <div class="whatsapp">
+        <a href="https://wa.me/919301352658">
+            <img src="whatsapp icon.png" width="50" alt="">
+        </a>
+    </div>
+    <section id="banner">
+        <img src="nplogodesign.jpeg" class="logo">
+        <div class="banner-text">
+            <h1>New Prasadhika Herbal Beauty Parlour</h1>
+            <p>Where elegance meets expertise-unleash your inner beauty</p>
+            <div class="banner-btn">
+                <a href="#"><span></span>Appointment</a> 
+                <a href="#"><span></span>Contact</a>  
+            </div>
+        </div>
+    </section>
+    <div id="navigation">
+        <nav>
+        <ul>
+            <li><a href="#banner">HOME</a></li>
+            <li><a href="#about" >ABOUT</a></li>
+            <li><a href="#services" >SERVICES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#feedback" >FEEDBACK</a></li>
+        </ul>
+        </nav>
+    </div>
+       
+    <div id="menubtn">
+        <img src="menu icon.jpeg" id="menu">
+    
+        </div>
+    </section>
+    
+
+
+   <!-- code for services -->
+
+
+   <section id="services">
+    <div class="title-text">
+        <p>We Provide Better</p>
+        <h1>Try and <span>Enjoy</span> the best experience</h1>
+    </div>
+   <div class="service-box">
+    <div class="single-service">
+        <img src="nridal pic.jpeg">
+        <div class="overlay"></div>
+        <div class="service-desc">
+            <h3>Bridal Makeover</h3>
+            <hr>
+            <p>Natural beauty is all we encourage</p>
+        </div>
+    </div>  
+    <div class="single-service">
+        <img src="haircutimage.jpeg">
+        <div class="overlay"></div>
+        <div class="service-desc">
+            <h3>Hair Styling</h3>
+            <hr>
+            <p>A good haircut is all you need</p>
+    </div> 
+    </div>
+    <div class="single-service">
+        <img src="facial.jpeg">
+        <div class="overlay"></div>
+        <div class="service-desc">
+            <h3>Grooming</h3>
+            <hr>
+            <p>Glowing and natural skin is waiting for you</p>
+    </div> 
+    </div>
+    <div class="single-service">
+        <img src="spa.jpeg">
+        <div class="overlay"></div>
+        <div class="service-desc">
+            <h3>Spa service</h3>
+            <hr>
+            <p>Therapy for your hair</p>
+    </div>               
+    </div>
+</div>
+   </section>
+
+  <!--code for services -->
+
+  <!-- code for about -->
+  <section id="about">
+    <div class="title-text">
+        <p>ABOUT US</p>
+        <h1>Why Choose Us?</h1>
+    </div>
+    <div class="feature-box">
+        <div class="feature">
+            <h1>Experience</h1>
+        </div>
+        <div class="feature-img">
+
+        </div>
+    </div>
+</section>
+
+
+  <!--code for feedback-->
+
+
+  <section id="feedback">
+    <div class="title-text">
+        <p>FEEDBACK</p>
+        <h1>What Client Says?</h1>
+    </div>
+    <div class="feedback-row">
+        <div class="feedback-col">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        </div>
+        <div class="feedback-col">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="feedback-col">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
+  </section>
+
+<section id="contact">
+    <h2 class="text-center">contact us</h2>
+    <div class="form">
+        <input type="text" name="name" id="name" placeholder="enter your name">
+        <input type="text" name="phone" id="phone" placeholder="enter your phone">
+        <input type="email" name="email" id="email" placeholder="enter your email">
+        <button class="btn btn-dark">submit</button>
+    </div>
+    </section>
+   </section>
+   <script>
+    var menubtn = document.getElementById('menubtn');
+    var navigation = document.getElementById('navigation');
+    var menu = document.getElementById('menu');
+    navigation.style.right= "-200px"
+    menubtn.onclick = function()
+    {
+        if(navigation.style.right== "-200px")
+        {
+          navigation.style.right="0";
+        }
+        else{
+            navigation.style.right="-200px";
+        }
+    }
+   </script>
+   
+</body>
+</html>
