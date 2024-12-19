@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="appointment.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Pacifico&family=Poppins&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
@@ -30,10 +31,11 @@
         <div class="banner-text">
             <h1>New Prasadhika Herbal Beauty Parlour</h1>
             <p>Where elegance meets expertise-unleash your inner beauty</p>
-            <div class="banner-btn">
-                <a href="#"><span></span>Appointment</a> 
-                <a href="#"><span></span>Contact</a>  
-            </div>
+            
+    <div class="banner-btn">
+        <a href="appointment.html"><span></span>Appointment</a>
+        <a href="#contact"><span></span>Contact</a>
+    </div>
         </div>
     </section>
     <div id="navigation">
@@ -42,11 +44,16 @@
             <li><a href="#banner">HOME</a></li>
             <li><a href="#about" >ABOUT</a></li>
             <li><a href="#services" >SERVICES</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+          <!--  <li><a href="#contact">CONTACT</a></li> -->
             <li><a href="#feedback" >FEEDBACK</a></li>
+           
+
         </ul>
         </nav>
     </div>
+
+
+    
        
     <div id="menubtn">
         <img src="menu icon.jpeg" id="menu">
@@ -54,38 +61,77 @@
         </div>
     </section>
     
+    <section id="gallery" style="padding: 20px; background:#e49ca8; text-align: center;">
+        <h2 style="font-family:'Kaushan Script', cursive;">Before & After</h2>
+        <p>See the transformations we offer!</p>
+        <div class="gallery-container">
+            <div class="comparison-slider">
+                <div class="comparison-image before">
+                    <img src="before1.jpg" alt="Before">
+                </div>
+                <div class="comparison-image after">
+                    <img src="makeup shiksha.jpg" alt="After">
+                </div>
+                <input type="range" min="0" max="100" value="50" class="slider">
+            </div>
+    
+            <div class="comparison-slider">
+                <div class="comparison-image before">
+                    <img src="before2.jpg" alt="Before">
+                </div>
+                <div class="comparison-image after">
+                    <img src="after2.jpg" alt="After">
+                </div>
+                <input type="range" min="0" max="100" value="50" class="slider">
+            </div>
 
-
+        <div class="comparison-slider">
+            <div class="comparison-image before">
+                <img src="before3.jpg" alt="Before">
+            </div>
+            <div class="comparison-image after">
+                <img src="after3.jpg" alt="After">
+            </div>
+            <input type="range" min="0" max="100" value="50" class="slider">
+        </div>
+    </div>
+    
+    </section>
+    
    <!-- code for services -->
 
 
    <section id="services">
     <div class="title-text">
         <p>We Provide Better</p>
-        <h1>Try and <span>Enjoy</span> the best experience</h1>
+        <h1>Try and Enjoy the best experience</h1>
     </div>
    <div class="service-box">
     <div class="single-service">
-        <img src="nridal pic.jpeg">
-        <div class="overlay"></div>
+        <img src="makeup shiksha.jpg">
+        <div class=""></div>
         <div class="service-desc">
             <h3>Bridal Makeover</h3>
             <hr>
-            <p>Natural beauty is all we encourage</p>
+            <p>Transform into the bride of your dreams.</p>
+            <a href="bridal.html">
+                <button class="view-detail-btn">View Detail</button>
+            </a>
+
         </div>
     </div>  
     <div class="single-service">
-        <img src="haircutimage.jpeg">
-        <div class="overlay"></div>
+        <img src="haircut scissors_.jpg">
+        <div class=""></div>
         <div class="service-desc">
-            <h3>Hair Styling</h3>
+            <h3>Hair Do's</h3>
             <hr>
-            <p>A good haircut is all you need</p>
+            <p>We'll Style, You'll Smile</p>
     </div> 
     </div>
     <div class="single-service">
-        <img src="facial.jpeg">
-        <div class="overlay"></div>
+        <img src="Feature-4.jpg">
+        <div class=""></div>
         <div class="service-desc">
             <h3>Grooming</h3>
             <hr>
@@ -93,15 +139,28 @@
     </div> 
     </div>
     <div class="single-service">
-        <img src="spa.jpeg">
-        <div class="overlay"></div>
+        <img src="booking.jpg">
+        <div class=""></div>
         <div class="service-desc">
-            <h3>Spa service</h3>
+            <h3>Book For Your Special Day</h3>
             <hr>
-            <p>Therapy for your hair</p>
+            <p>You Set The Trend</p>
+            <hr>
+            <p>Lehenga,Jewellery,Mehendi & more</p>
     </div>               
     </div>
+    <div class="single-service">
+        <img src="sale-number-25-percent-off-golden-png.png">
+        <div class=""></div>
+        <div class="service-desc">
+            <h3>Special Packages and Offers</h3>
+            <hr>
+            <p>Super Saver</p>
+    </div> 
+    </div>
 </div>
+
+
    </section>
 
   <!--code for services -->
@@ -143,33 +202,220 @@
         </div>
     </div>
   </section>
+  <style>
+  .feedback-form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Ubuntu', sans-serif;
+}
 
-<section id="contact">
-    <h2 class="text-center">contact us</h2>
-    <div class="form">
-        <input type="text" name="name" id="name" placeholder="enter your name">
-        <input type="text" name="phone" id="phone" placeholder="enter your phone">
-        <input type="email" name="email" id="email" placeholder="enter your email">
-        <button class="btn btn-dark">submit</button>
+.feedback-form-container h2 {
+    text-align: center;
+    color: #9b4f63;
+}
+
+.feedback-form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+.feedback-form-container input,
+.feedback-form-container select,
+.feedback-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.feedback-form-container textarea {
+    resize: none;
+    height: 100px;
+}
+
+.feedback-form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #9b4f63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.feedback-form-container button:hover {
+    background-color: #7a3c50;
+}
+
+@media (max-width: 768px) {
+    .feedback-form-container {
+        margin: 20px;
+        padding: 15px;
+    }
+}
+</style>
+
+  <section id="feedback">
+    <div class="feedback-form-container">
+        <h2>We Value Your Feedback!</h2>
+        <form id="feedback-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="rating">Rate Our Service</label>
+            <select id="rating" name="rating" required>
+                <option value="5">Excellent</option>
+                <option value="4">Good</option>
+                <option value="3">Average</option>
+                <option value="2">Poor</option>
+                <option value="1">Very Poor</option>
+            </select>
+
+            <label for="comments">Feedback</label>
+            <textarea id="comments" name="comments" placeholder="Write your feedback here..." required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
     </div>
-    </section>
-   </section>
-   <script>
-    var menubtn = document.getElementById('menubtn');
-    var navigation = document.getElementById('navigation');
-    var menu = document.getElementById('menu');
-    navigation.style.right= "-200px"
-    menubtn.onclick = function()
-    {
-        if(navigation.style.right== "-200px")
-        {
-          navigation.style.right="0";
+</section>
+
+<script>
+    document.querySelectorAll(".comparison-slider").forEach(slider => {
+        const range = slider.querySelector(".slider");
+        const afterImage = slider.querySelector(".comparison-image.after");
+    
+        range.addEventListener("input", () => {
+            const sliderValue = range.value;
+            afterImage.style.clipPath = `inset(0 ${100 - sliderValue}% 0 0)`;
+        });
+    });
+    </script>
+    
+
+<script>
+    document.getElementById('feedback-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+
+        try {
+            const response = await fetch('http://localhost:3000/feedback', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(Object.fromEntries(formData)),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                alert('Thank you for your feedback!');
+                e.target.reset(); // Clear the form
+            } else {
+                alert('Failed to submit feedback. Please try again.');
+            }
+        } catch (error) {
+            alert('An error occurred while submitting your feedback.');
+            console.error(error);
         }
-        else{
-            navigation.style.right="-200px";
+    });
+</script>
+
+
+
+  </script>
+  
+   </script>
+   <script>
+    async function fetchServices() {
+        try {
+            const response = await fetch('http://localhost:3000/services'); // Replace with your API endpoint
+            const services = await response.json();
+            console.log(services); // Log the response data
+        } catch (error) {
+            console.error('Error fetching services:', error);
         }
     }
-   </script>
+
+    // Call the function when the page loads
+    document.addEventListener('DOMContentLoaded', fetchServices);
+</script>
+<script src="menu.js"></script>
+
+<script>document.getElementById('appointmentForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent default form submission
+
+    const formData = {
+        customer_name: document.getElementById('customer_name').value,
+        service_id: document.getElementById('service_id').value,
+        date: document.getElementById('date').value,
+        time: document.getElementById('time').value
+    };
+
+    // Check if all fields are filled
+    if (!formData.customer_name || !formData.service_id || !formData.date || !formData.time) {
+        alert('Please fill all fields!');
+        return;
+    }
+
+    fetch('http://localhost:3000/appointments', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message) {
+            alert(data.message); // Show success message
+        } else {
+            alert('Failed to book appointment');
+        }
+    })
+    .catch(error => {
+        console.error('Error booking appointment:', error);
+        alert('There was an error submitting your appointment.');
+    });
+});
+</script>
+
+
+<!-- Contact Section -->
+<footer id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-icons">
+        <a href="https://www.instagram.com/shiksha_sd05" target="_blank">
+          <img src="Instagram-Logo-PNG-Image-PNG.png" alt="Instagram" class="icon">
+        </a>
+        <a href="mailto:shikshadwivedi05@gmail.com">
+          <img src="arrow-with-e-mail-logo-png-7.png" alt="Email" class="icon">
+        </a>
+        <a href="tel:+919301352658">
+          <img src="call-logo-png-3.png" alt="Phone" class="icon">
+        </a>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer Section -->
+<div class="footer">
+    <p>&copy; 2024 New_Prasadhika_Herbal_Beauty_Salon. All Rights Reserved.</p>
+  </div>
+
+  <script src="services.js"></script>
+  
+  
    
 </body>
 </html>

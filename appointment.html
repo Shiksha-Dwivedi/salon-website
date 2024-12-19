@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="appointment.css">
+    <title>Book an Appointment</title>
+   
+</head>
+<body>
+            <!-- Back to Home Button -->
+            <div class="container mt-3">
+                <a href="index.html" class="btn-back-home">Back to Home</a>
+            </div>
+
+    <section class="appointment-form-container">
+        <!-- <h2>Book Your Appointment</h2> -->
+        <form id="appointment-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="service">Select Service</label>
+            <select id="service" name="service" required>
+                <option value="Bridal Makeover">Bridal Makeover</option>
+                <option value="Hair Styling">Hair Styling</option>
+                <option value="Grooming">Grooming</option>
+                <option value="Spa Service">Spa Service</option>
+                <option value="Thread">Thread</option>
+            </select>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required>
+
+            <button type="submit">Book Appointment</button>
+
+            <div id="price-calculator">
+                <h2>Estimated Cost</h2>
+                <div id="total-cost">
+                    <h3>Total: $<span id="calculated-total">0</span></h3>
+                </div>
+                <button type="button" id="book-now-button">Book Now</button>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const totalCostElement = document.getElementById("calculated-total");
+            const serviceSelect = document.getElementById("service");
+            const bookNowButton = document.getElementById("book-now-button");
+
+            // Function to calculate the total cost
+            function calculateTotal() {
+                let total = 0;
+
+                // Get selected service price from the dropdown
+                const selectedService = serviceSelect.selectedOptions[0];
+                const servicePrice = parseFloat(selectedService.getAttribute('service_price'));
+
+                if (servicePrice) {
+                    total += servicePrice;
+                }
+
+                totalCostElement.textContent = total.toFixed(2); // Display total cost
+            }
+
+            // Add event listener for service dropdown change
+            serviceSelect.addEventListener("change", calculateTotal);
+
+            // Handle booking
+            bookNowButton.addEventListener("click", () => {
+                const total = totalCostElement.textContent;
+                if (total === "0.00") {
+                    alert("Please select a service.");
+                } else {
+                    alert(`Your estimated total is $${total}. Proceed to book your appointment!`);
+                }
+            });
+
+            // Initial calculation on page load
+            calculateTotal();
+        });
+
+        document.getElementById('appointment-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = {
+                customer_name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service_name: document.getElementById('service').value,
+                date: document.getElementById('date').value,
+                time: document.getElementById('time').value,
+            };
+
+            if (!formData.customer_name || !formData.email || !formData.phone || !formData.service_name || !formData.date || !formData.time) {
+                alert('Please fill all fields!');
+                return;
+            }
+
+            fetch('http://localhost:3000/appointments', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    alert(data.message);
+                } else {
+                    alert('Failed to book appointment');
+                }
+            })
+            .catch(error => {
+                console.error('Error booking appointment:', error);
+                alert('There was an error submitting your appointment.');
+            });
+        });
+    </script>
+    <script>
+        async function fetchServices() {
+            try {
+                const response = await fetch('http://localhost:3000/services');
+                const services = await response.json();
+                const serviceSelect = document.getElementById('service_id');
+
+                serviceSelect.innerHTML = ''; // Clear existing options
+
+                const defaultOption = document.createElement('option');
+                defaultOption.value = '';
+                defaultOption.textContent = 'Select a Service';
+                serviceSelect.appendChild(defaultOption);
+
+                services.forEach(service => {
+                    const option = document.createElement('option');
+                    option.value = service.name; // Use service name as value
+                    option.textContent = `${service.name} - $${service.price}`;
+                    option.dataset.price = service.price;
+                    serviceSelect.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Error fetching services:', error);
+                alert('Unable to fetch services. Please try again later.');
+            }
+        }
+
+        window.onload = fetchServices;
+
+        document.getElementById('appointment-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = {
+                customer_name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service_name: document.getElementById('service').value,
+                date: document.getElementById('date').value,
+                time: document.getElementById('time').value,
+            };
+
+            if (!formData.customer_name || !formData.email || !formData.phone || !formData.service_name || !formData.date || !formData.time) {
+                alert('Please fill all fields!');
+                return;
+            }
+
+            if (formData.service_name === '') {
+                alert('Please select a valid service!');
+                return;
+            }
+
+            fetch('http://localhost:3000/appointments', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    alert(data.message);
+                } else {
+                    alert('Failed to book appointment');
+                }
+            })
+            .catch(error => {
+                console.error('Error booking appointment:', error);
+                alert('There was an error submitting your appointment.');
+            });
+        });
+    </script>
+     <script>
+        document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+          event.preventDefault();  // Prevent the form from submitting the traditional way
+    
+          // Collect data from the form fields
+          const appointmentData = {
+            customer_name: document.getElementById('customerName').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            service_name: document.getElementById('serviceName').value,
+            date: document.getElementById('date').value,
+            time: document.getElementById('time').value
+          };
+    
+          // Send the data to the backend
+          fetch('/appointments', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(appointmentData)
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.servicePrice) {
+              document.getElementById('estimatedCost').innerText = `Estimated Cost: $${data.servicePrice}`;
+            }
+          })
+          .catch(error => {
+            console.error('Error booking appointment:', error);
+          });
+        });
+      </script>
+</body>
+</html>

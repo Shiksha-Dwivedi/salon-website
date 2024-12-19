@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridal Makeover - Our Services</title>
+    <link rel="stylesheet" href="bridal.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="services.html">Services</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="service-detail">
+        <h2>Bridal Makeover</h2>
+        <div class="service-description">
+            <p>Our Bridal Makeover service is designed to make your special day unforgettable. We offer a range of services tailored to your needs, ensuring you look flawless from head to toe.</p>
+        </div>
+
+        <div class="service-features">
+            <h3>What We Offer:</h3>
+            <ul>
+                <li><strong>Hair Styling:</strong> Elegant bridal hair styles tailored to suit your personality and wedding theme.</li>
+                <li><strong>Makeup Application:</strong> High-quality makeup to ensure a long-lasting, beautiful look throughout your wedding day.</li>
+                <li><strong>Skincare Treatments:</strong> Customized facial and skincare treatments to achieve glowing, smooth skin.</li>
+                <li><strong>Pre-Wedding Consultation:</strong> A one-on-one session to discuss your vision and try out different looks.</li>
+                <li><strong>Bridal Party Services:</strong> Special packages for bridesmaids, mothers of the bride, and other family members.</li>
+            </ul>
+        </div>
+
+        <div class="service-gallery">
+            <h3>Gallery:</h3>
+            <div class="gallery-images">
+                <img src="images/bridal-look1.jpg" alt="Bridal Makeover Look 1">
+                <img src="images/bridal-look2.jpg" alt="Bridal Makeover Look 2">
+                <img src="images/bridal-look3.jpg" alt="Bridal Makeover Look 3">
+            </div>
+        </div>
+
+        <div class="service-pricing">
+            <h3>Pricing:</h3>
+            <p>Bridal Makeover: $XXX</p>
+            <p>Bridal Party Makeup: $XXX</p>
+            <p>Skincare Treatment: $XXX</p>
+            <p>Customized packages available on request.</p>
+        </div>
+
+        <!-- View Details Button (Triggers Modal) -->
+        <button class="view-detail-btn" id="viewDetailsBtn">View Full Details</button>
+
+        <!-- Modal Structure -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Bridal Makeover - Full Service Details</h2>
+                <div class="modal-description">
+                    <p>Discover the full range of services we offer as part of our Bridal Makeover package. Our team ensures you feel pampered and radiant on your special day!</p>
+                </div>
+
+                <div class="modal-service-features">
+                    <h3>Complete Service Breakdown:</h3>
+                    <ul>
+                        <li><strong>Hair Styling:</strong> Professional hair styling that enhances your natural beauty, ensuring your bridal hairstyle matches your vision perfectly.</li>
+                        <li><strong>Makeup Application:</strong> High-end makeup products for a flawless look, with touch-ups throughout the day.</li>
+                        <li><strong>Skincare Treatments:</strong> Pre-wedding skincare to achieve clear, radiant skin for your big day.</li>
+                        <li><strong>Pre-Wedding Consultation:</strong> A chance to discuss your preferences and try out your look before the wedding day.</li>
+                        <li><strong>Bridal Party Services:</strong> Specially curated packages for the bridal party to ensure everyone looks and feels fantastic.</li>
+                    </ul>
+                </div>
+
+                <div class="modal-booking">
+                    <h3>Book Your Bridal Makeover Today!</h3>
+                    <a href="appointment.html" class="book-now-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; New_Prasadhika_Herbal_Beauty_Salon. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Get modal and buttons
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("viewDetailsBtn");
+        var span = document.getElementsByClassName("close-btn")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (close button), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
