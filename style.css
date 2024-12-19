@@ -1,0 +1,908 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+.logo{
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 2%;
+    border:3px solid white ;
+    border-radius: 150px;
+    mix-blend-mode:multiply;
+    font-weight: bold;
+}
+
+
+
+#navigation{
+    width: 200px;
+    height: 100vh;
+    top: 0;
+    background: rgb(156, 69, 69);
+    z-index: 2;
+    position: fixed;
+    right: -200px; /* Start off-screen */
+    transition: right 0.3s ease;
+}
+   
+
+
+
+
+nav ul li{
+    list-style: none;
+  
+    padding: 50px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+
+}
+
+nav ul li a:hover{
+     color: grey;
+
+}
+
+/*.rightnav{
+    width: 70%;
+    text-align:right ;
+    padding: 0 50px;
+   /* background-color: black;
+}
+
+.search{
+    padding: 5px;
+    font-size: 17px;
+    border: 2px solid grey;
+    border-radius: 9px;
+    
+}*/
+
+#menubtn{
+    width: 50px;
+    height: 50px;
+    background: #b26874;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    z-index: 3;
+    cursor: pointer;
+    border-radius: 3px;
+}
+#menubtn img{
+    width: 40px;
+    margin: 5px;
+    mix-blend-mode: multiply;
+}
+
+.background{
+    background: rgba(0, 0, 0, 0.7) url(parlour\ photo.jpg);
+   
+    background-size: cover;
+    background-blend-mode: darken;
+}
+.box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 80%;
+    max-width: 50%;
+    margin: auto;
+}
+.firsthalf{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.secondhalf{
+    width: 30%;
+}
+.secondhalf img{
+    width: 70%;
+    padding: 0;
+  
+    border-radius: 80px; 
+    display: block;
+    margin: auto;
+}
+.text-big{
+     font-size: 60px;
+     width: 280%;
+     padding: 0 0 0 5%;
+     font-family: 'Kaushan Script', cursive;
+     justify-content: center;
+     
+
+
+}
+.text-small{
+    font-size: 25px;
+    width: 180%;
+    font-weight: bold;
+}
+#banner{
+    background: linear-gradient(rgba(0,0,0,0.5),#b26874), url(parlour\ photo.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.banner-text{
+    text-align: center;
+    color: white;
+    padding-top: 180px;
+}
+.banner-text h1{
+    font-size: 130px;
+    font-family: 'Kaushan Script', cursive;
+
+}
+.banner-text p{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+.banner-btn{
+    margin: 70px auto 0;
+}
+.banner-btn a{
+    padding: 8px 20px;
+    margin: 7px 2px;
+    border: 2px solid white;
+    border-radius: 8px;
+   
+    background: none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+}
+.banner-btn a span{
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: -1;
+    transition: 0.5s;
+}
+.banner-btn a:hover span{
+    width: 100%;
+}
+.banner-btn a:hover {
+   color: black;
+}
+.btn-sm{
+    padding: 5px 10px;
+    vertical-align: middle;
+}
+.section{
+    height: 100vh;
+    display:auto;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 80%;
+  
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+.thumbnail{
+    max-width: fit-content;
+    height: 100vh;
+    background-size: cover;
+}
+
+.sectionsubtag{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.contact {
+    background-color: #e49ca8; 
+    padding: 50px 0;
+}
+
+.text-center {
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff; 
+}
+
+.form {
+    max-width: 600px;
+    margin: auto;
+    background: #fdfdfd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.form input:focus,
+.form textarea:focus {
+    outline: none;
+    border-color: #9b4f63; 
+    box-shadow: 0 0 8px rgba(155, 79, 99, 0.3);
+}
+
+.form textarea {
+    resize: none;
+    height: 150px;
+}
+
+.form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #9b4f63;
+    color: white;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form button:hover {
+    background-color: #7a3c50; 
+}
+
+
+
+@media screen and (max-width: 770px) {
+    .form {
+        padding: 15px;
+    }
+
+    .text-center {
+        font-size: 25px;
+    }
+}
+
+
+#about{
+    background: #e49ca8;
+}
+.feature-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+.feature{
+    flex-basis: 50%;
+    
+}
+
+
+/* General Styles */
+
+.gallery-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* gap: 10px; */
+    margin-top: 30px;
+    
+   
+}
+
+.comparison-slider {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    /* background: #ddd; */
+}
+
+.comparison-slider:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.comparison-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.comparison-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fit perfectly */
+}
+
+.comparison-image.after {
+    clip-path: inset(0 50% 0 0);
+    transition: clip-path 0.3s ease-in-out;
+}
+
+.slider {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background: #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    background: #e49ca8;
+    border-radius: 50%;
+    cursor: pointer;
+    appearance: none;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #e49ca8;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .gallery-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .comparison-slider {
+        width: 250px;
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .comparison-slider {
+        width: 90%; /* Adjust to take most of the screen width */
+        max-width: 400px;
+        height: 220px;
+    }
+}
+
+/* services css */
+
+/* Updated Services Section */
+#services {
+    width: 100%;
+    background: linear-gradient(135deg, #d39ba5, #e4b1b7); /* Soft gradient for visual appeal */
+    padding: 70px 0;
+    color: #fff; /* Ensure text stands out */
+    text-align: center; /* Center-align text */
+}
+
+.service-box {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    align-items: stretch;
+    gap: 20px; /* Add spacing between services */
+}
+
+.single-service {
+    flex-basis: 30%; /* Better spacing for desktop */
+    text-align: center;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    overflow: hidden;
+    position: relative;
+    color: #333; /* Text color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.single-service:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.single-service img {
+    width: 70%;
+    height: 100vh;
+    height: auto;
+    object-fit:cover;
+    border-bottom: 5px solid #e49ca8; /* Accent color border */
+}
+.single-service img[src="haircut scissors_.jpg"] {
+    width: 95%;
+    height: 400px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures it fits properly without distortion */
+}
+.single-service img[src="Feature-4.jpg"] {
+    width: 95%;
+    height: 400px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures it fits properly without distortion */
+}
+.single-service img[src="makeup shiksha.jpg"] {
+    width: 95%;
+    height: 400px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures it fits properly without distortion */
+}
+.single-service img[src="booking.jpg"] {
+    width: 95%;
+    height: 400px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures it fits properly without distortion */
+}
+.single-service img[src="sale-number-25-percent-off-golden-png.png"] {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures it fits properly without distortion */
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(155, 79, 99, 0.7); /* Transparent overlay */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.single-service:hover .overlay {
+    opacity: 1;
+}
+
+.service-desc {
+    padding: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #555;
+}
+
+.service-desc p {
+    margin: 10px 0;
+    color: #9b4f63; /* Accent color */
+    font-size: 18px;
+}
+
+.title-text {
+    font-family: 'Kaushan Script', cursive;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.title-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.title-text p {
+    font-size: 20px;
+    color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+    .single-service {
+        flex-basis: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .single-service {
+        flex-basis: 100%;
+    }
+}
+
+/* feedback css */
+
+#feedback{
+    width: 100%;
+    padding: 70px 0;
+    background: #e49ca8;
+
+}
+.feedback-row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.feedback-col{
+    flex-basis: 28%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px grey;
+    cursor: pointer;
+}
+.feedback-col p{
+    font-weight: bold;
+    text-align: justify;
+}
+
+
+#feedback-section {
+    background-color: #e49ca8; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+#feedback h1,
+#about h1 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 36px; /* Adjust size as needed */
+    color: #fff; /* Optional: Ensure the text stands out */
+    padding: 20px 0; /* Optional: Add some vertical spacing */
+}
+
+#feedback p,
+#about p {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 36px; /* Adjust size as needed */
+    color: #fff; /* Optional: Ensure the text stands out */
+    padding: 20px 0; /* Optional: Add some vertical spacing */
+}
+
+/*
+/* Feedback Form */
+
+#feedback-form {
+    max-width: 500px;
+    width: 100%; 
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; 
+    text-align: center;
+}
+
+/* Form Inputs and Button */
+
+#feedback-form label {
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+    text-align: left; 
+}
+
+#feedback-form input,
+#feedback-form textarea,
+#feedback-form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+#feedback-form input:focus,
+#feedback-form textarea:focus {
+    outline: none;
+    border-color: #9b4f63; 
+    box-shadow: 0 0 8px rgba(155, 79, 99, 0.3);
+}
+
+#feedback-form textarea {
+    resize: none;
+    height: 120px;
+}
+
+#feedback-form button {
+    background-color: #9b4f63;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#feedback-form button:hover {
+    background-color: #7a3c50;
+}
+
+
+/* Contact Section */
+/* Contact Section */
+.contact-section {
+    background: linear-gradient(135deg, #e49ca8, #e27487); /* Subtle gradient for a modern look */
+    padding: 20px 20px;
+    text-align: center;
+    /*border-top: 5px solid #9b4f63; /* Highlight the section with a color accent */
+    /*box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow at the top */
+  }
+  
+  .contact-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Ubuntu', sans-serif; /* Stylish font */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Enables wrapping for smaller screens */
+  }
+  
+  .contact-icons .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Make icons circular */
+    background-color:#ac586e; /* White background for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    filter: grayscale(50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Adds depth to icons */
+  }
+  
+  .contact-icons .icon img {
+    width: 60%; /* Ensure icon images scale nicely */
+    height: auto;
+  }
+  
+  .contact-icons .icon:hover {
+    transform: scale(1.2); /* Enlarge on hover */
+    filter: grayscale(0%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  }
+  .view-detail-btn {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #ac586e; /* Add your desired color here */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.view-detail-btn:hover {
+    background-color: #ac586e; /* Darker color for hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .contact-section {
+      padding: 40px 15px; /* Adjust padding for tablets */
+    }
+  
+    .contact-section h2 {
+      font-size: 24px; /* Slightly smaller heading */
+    }
+  
+    .contact-icons .icon {
+      width: 45px; /* Smaller icons for tablets */
+      height: 45px;
+      gap: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .contact-section {
+      padding: 30px 10px; /* Further reduce padding for small screens */
+    }
+  
+    .contact-section h2 {
+      font-size: 20px; /* Compact heading */
+    }
+  
+    .contact-icons {
+      gap: 15px; /* Reduce icon spacing */
+    }
+  
+    .contact-icons .icon {
+      width: 40px; /* Smaller circular icons for mobile */
+      height: 40px;
+    }
+  }
+  
+
+  /* Footer Section */
+.footer {
+    background-color: #9b4f63; /* Match with the primary color of your design */
+    color: white; /* Text color for contrast */
+    text-align: center; /* Center-align the content */
+    padding: 15px 10px; /* Padding for spacing */
+    font-size: 14px; /* Small yet readable text size */
+    font-family: 'Ubuntu', sans-serif; /* Consistent font family */
+    border-top: 2px solid #7a3c50; /* Subtle border for separation */
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 480px) {
+    .footer {
+      font-size: 12px; /* Adjust text size for smaller screens */
+      padding: 10px 5px; /* Reduce padding for compact view */
+    }
+  }
+  
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+    #feedback-form {
+        padding: 20px;
+    }
+    #feedback-form input,
+    #feedback-form textarea,
+    #feedback-form button {
+        font-size: 14px;
+    }
+}
+  /* General Responsive Design */
+@media screen and (max-width: 1024px) {
+    .text-big {
+        font-size: 36px;
+    }
+
+    .text-small {
+        font-size: 16px;
+    }
+
+    .services .service-box {
+        flex-basis: 45%;
+    }
+
+    .feedback .feedback-col {
+        flex-basis: 45%;
+    }
+
+    .contact .form {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner-text h1 {
+        font-size: 32px;
+    }
+
+    .banner-text p {
+        font-size: 16px;
+    }
+
+    .services .services-row {
+        flex-direction: column;
+    }
+
+    .feedback .feedback-row {
+        flex-direction: column;
+    }
+
+    .section {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        padding: 20px 10px;
+    }
+
+    #menubtn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text-big {
+        font-size: 24px;
+    }
+
+    .text-small {
+        font-size: 14px;
+    }
+
+    .banner-btn a {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .feedback .feedback-col {
+        flex-basis: 100%;
+    }
+
+    .services .service-box {
+        flex-basis: 100%;
+    }
+
+    .contact .form input,
+    .contact .form textarea,
+    .contact .form button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+
+  
